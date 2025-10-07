@@ -7,24 +7,35 @@
     <title>Hannan Amjad | Portfolio</title>
     <link rel="icon" href="Adobe Express - file.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div id="welcome-popup">
-        <h1>Welcome to my Portfolio</h1>
-        <h2>It's <span>"Hannan Developer"</span></h2>
-        <dotlottie-wc src="https://lottie.host/89f2227d-3fc7-4e07-afbe-18876ab66a46/3HrHQWtlnG.lottie" class="popupgif"
+        <h1 class="popup">Welcome to my Portfolio</h1>
+        <dotlottie-wc class="popup-loading"
+            src="https://lottie.host/b71bcf42-4068-41b6-b4f4-c5344fcbf430/eKZypSBKUj.lottie" style="width: 100%;"
             autoplay loop></dotlottie-wc>
     </div>
 
     <!-- Head Section -->
     <header class="header">
         <div class="header-main">
-            <h1 class="animate-on-scroll">Hannan Amjad</h1>
+            <a href="#">
+                <div class="header-logo">
+                    <h1>HA</h1>
+                </div>
+            </a>
+            <div class="header-logo-item">
+                <a href="#">
+                    <h1>Hannan Amjad</h1>
+                </a>
+                <p>Full‑Stack Web Developer</p>
+            </div>
         </div>
         <div class="header-items">
             <nav>
@@ -41,35 +52,42 @@
     </header>
     <!-- Header end -->
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-main">
-            <h1 class="animate-on-scroll">Web <br> Developer</h1>
-            <h2 class="animate-on-scroll"><span class="hero-typer"></span></h2>
-            <p class="animate-on-scroll">I create modern web experiences that feel engaging and intuitive.
-                Each project begins with a fresh idea and a clear vision.
-                Design and detail guide every decision I make along the way.
-                The result is a digital presence that stands out and inspires action.</p>
-            <div class="hero-main-link">
-                <a href=""><button id="hero-link1" class="animate-on-scroll">JavaScript <i
-                            class="fa-solid fa-arrow-up-right-from-square hero-link"
-                            id="hero-link-img1"></i></button></a>
+    <section id="hero">
+        <div class="hero">
+            <div class="hero-main">
+                <h1 class="animate-on-scroll">I Build Web Experiences, Not Just Websites</h1>
+                <h2 class="animate-on-scroll"><span class="hero-typer"></span></h2>
+                <p class="animate-on-scroll">I create modern web experiences that feel engaging and intuitive.
+                    Each project begins with a fresh idea and a clear vision.
+                    Design and detail guide every decision I make along the way.
+                    The result is a digital presence that stands out and inspires action.</p>
+                <div class="hero-main-link">
+                    <a href=""><button id="hero-link1" class="animate-on-scroll">HTML <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img1"></i></button></a>
 
-                <a href=""> <button id="hero-link2" class="animate-on-scroll">MySQL <i
-                            class="fa-solid fa-arrow-up-right-from-square hero-link"
-                            id="hero-link-img2"></i></button></a>
+                    <a href=""> <button id="hero-link2" class="animate-on-scroll">CSS <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img2"></i></button></a>
 
 
-                <a href=""> <button id="hero-link3" class="animate-on-scroll">PHP <i
-                            class="fa-solid fa-arrow-up-right-from-square hero-link"
-                            id="hero-link-img3"></i></button></a>
+                    <a href=""> <button id="hero-link3" class="animate-on-scroll">JavaScript <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img3"></i></button></a>
 
+                    <a href=""><button id="hero-link4" class="animate-on-scroll">Jquery <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img4"></i></button></a>
+                    <a href=""><button id="hero-link5" class="animate-on-scroll">My SQL <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img5"></i></button></a>
+                    <a href=""><button id="hero-link6" class="animate-on-scroll">PHP <i
+                                class="fa-solid fa-arrow-up-right-from-square hero-link"
+                                id="hero-link-img6"></i></button></a>
+                </div>
             </div>
         </div>
-        <div class="hero-item">
-            <dotlottie-wc src="https://lottie.host/1b5d00e9-7b9e-40aa-a27b-5ccd3388233a/MCLMHyvv7i.lottie" autoplay loop
-                class="hero-gif animate-on-scroll"></dotlottie-wc>
-        </div>
-    </div>
+    </section>
     <!-- Hero end -->
     <!-- About Us -->
     <div class="about" id="about">
@@ -193,6 +211,8 @@
     </div>
     <!-- portfolio end -->
     <!-- Contact Start -->
+
+
     <section class="contact" id="contact">
 
         <div class="contact-heading">
@@ -229,25 +249,44 @@
             <div class="contact-area">
 
                 <div class="contact-area-items">
-                    <div class="contact-area-things animate-on-scroll">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <h1>Linkedin</h1>
-                        <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+
+                    <div class="contact-area-thing animate-on-scroll">
+                        <a href="www.linkedin.com/in/hannanamjad">
+                            <div class="contact-area-things animate-on-scroll">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <h1>Linkedin</h1>
+                                <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact-area-things animate-on-scroll">
-                        <i class="fa-brands fa-facebook"></i>
-                        <h1>Facebook</h1>
-                        <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                    <div class="contact-area-thing animate-on-scroll">
+                        <a href="">
+                            <div class="contact-area-things animate-on-scroll">
+                                <i class="fa-brands fa-facebook"></i>
+                                <h1>Facebook</h1>
+                                <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact-area-things animate-on-scroll">
-                        <i class="fa-brands fa-square-instagram"></i>
-                        <h1>Instagram</h1>
-                        <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                    <div class="contact-area-thing animate-on-scroll">
+                        <a href="">
+                            <div class="contact-area-things animate-on-scroll">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <h1>Instagram</h1>
+                                <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact-area-things animate-on-scroll">
-                        <i class="fa-brands fa-github"></i>
-                        <h1>Github</h1>
-                        <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+
+
+                    <div class="contact-area-thing animate-on-scroll">
+                        <a href="https://github.com/hannanamjad963" target="_blank">
+                            <div class="contact-area-things animate-on-scroll">
+                                <i class="fa-brands fa-github"></i>
+                                <h1>Github</h1>
+                                <i class="fa-solid fa-arrow-up-right-from-square hero-link"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -296,11 +335,6 @@
     </footer>
 
     <!-- Footer end -->
-    <!-- Back to top-->
-    <div id="back-to-top" onclick="gotoup()">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-    <!-- Back to top end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -313,6 +347,38 @@
             $("#hero-link3").hover(function () {
                 $("#hero-link-img3").toggle(200);
             });
+            $("#hero-link4").hover(function () {
+                $("#hero-link-img4").toggle(200);
+            });
+            $("#hero-link5").hover(function () {
+                $("#hero-link-img5").toggle(200);
+            });
+            $("#hero-link6").hover(function () {
+                $("#hero-link-img6").toggle(200);
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    <!-- Initialize Vanta -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            VANTA.NET({
+                el: "#hero", // hero section ka id
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x5a6bff,          // line color
+                backgroundColor: 0x071024, // bg color
+                points: 10.00,
+                maxDistance: 20.00,
+                spacing: 15.00
+            })
         });
     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>

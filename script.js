@@ -1,48 +1,62 @@
-// -------Onload-----------
-window.addEventListener('load', () => {
+// ------- Onload -----------
+window.addEventListener('load', function () {
     const popup = document.getElementById('welcome-popup');
+
+    // Scroll top (prevent start from middle)
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    // Wait 3s for loader, then hide smoothly and start scripts
     setTimeout(() => {
         popup.classList.add('hide');
-        startSiteScripts();
-    }, 2000);
+
+        // Give browser a render frame before heavy JS
+        requestAnimationFrame(() => {
+            setTimeout(startSiteScripts, 300);
+        });
+    }, 3000);
 });
 
 function startSiteScripts() {
 
-    // ---------- Typed.js (guarded) ----------
+    // ---------- Typed.js (guarded with slight delay) ----------
     if (typeof Typed !== 'undefined') {
-        new Typed('.hero-typer', {
-            strings: [
-                "Frontend Developer",
-                "Backend Developer",
-                "Full-Stack Developer",
-                "Web Designer",
-                "Mobile App Developer",
-                "UI/UX Designer",
-                "Problem-Solver"
-            ],
-            typeSpeed: 40,
-            backSpeed: 40,
-            cursorChar: '',
-            loop: true
-        });
+        setTimeout(() => {
+            new Typed('.hero-typer', {
+                strings: [
+                    "Frontend Developer",
+                    "Backend Developer",
+                    "Full-Stack Developer",
+                    "Web Designer",
+                    "Freelancer",
+                    "Problem-Solver"
+                ],
+                typeSpeed: 50,
+                backSpeed: 50,
+                cursorChar: '',
+                loop: true
+            });
+        }, 500); // starts a bit after load
     }
 
     // ---------- Mobile nav toggle ----------
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.header .header-items nav');
-    navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
-    navMenu.addEventListener('click', e => {
-        if (e.target.tagName === 'A') navMenu.classList.remove('show');
-    });
 
-    // document click: close mobile menu if click outside
-    document.addEventListener('click', (ev) => {
-        if (!navMenu.contains(ev.target) && !navToggle.contains(ev.target)) {
-            navMenu.classList.remove('show');
-        }
-        checkScroll();
-    });
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+        navMenu.addEventListener('click', e => {
+            if (e.target.tagName === 'A') navMenu.classList.remove('show');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (ev) => {
+            if (!navMenu.contains(ev.target) && !navToggle.contains(ev.target)) {
+                navMenu.classList.remove('show');
+            }
+            checkScroll();
+        });
+    }
 
     // ---------- Portfolio Tabs ----------
     const tabbutton = document.querySelectorAll('.tab-button');
@@ -59,30 +73,38 @@ function startSiteScripts() {
             const tabsystem = document.getElementById(tabid);
             if (tabsystem) tabsystem.classList.add('active');
 
-            if (typeof checkScroll === 'function') checkScroll();
+            checkScroll();
         });
     });
 
-    // ---------- Scroll-on Animation ----------
+    // ---------- Scroll-on Animation (optimized) ----------
     const boxes = document.querySelectorAll('.animate-on-scroll');
 
     function checkScroll() {
-        const triggerPoint = window.innerHeight * 1.0;
+        const triggerPoint = window.innerHeight * 1.01;
         boxes.forEach(box => {
             const rect = box.getBoundingClientRect();
             if (rect.top < triggerPoint && rect.bottom > 0) {
                 box.classList.add('show');
-            }
-            else {
+            } else {
                 box.classList.remove('show');
             }
         });
     }
 
-    window.addEventListener('scroll', checkScroll, { passive: true });
+    // Throttle scroll listener for better FPS
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                checkScroll();
+                scrollTimeout = null;
+            }, 100);
+        }
+    }, { passive: true });
+
     window.addEventListener('resize', checkScroll);
     checkScroll(); // run once immediately
-
 
     // ---------- Sticky Navbar Highlight ----------
     (function () {
@@ -232,16 +254,6 @@ function startSiteScripts() {
         updateActiveByViewport();
     })();
 }
-// -----Backtotop-----
-const backtotop = document.getElementById('back-to-top');
-window.onscroll = function () {
-    if (document.documentElement.scrollTop >= 500) {
-        backtotop.style.display = "flex";
-    } else {
-        backtotop.style.display = "none";
-    }
-}
 
-function gotoup() {
-    document.documentElement.scrollTop = 0;
-}
+
+

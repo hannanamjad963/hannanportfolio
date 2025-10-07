@@ -1,0 +1,33 @@
+/* Popup animation optimized */
+.popup {
+    animation: smooth-popup 1s cubic-bezier(0.4, 0, 0.2, 1) both, fadeOut 0.5s ease 2.1s forwards;
+}
+
+/* Smooth pop-in from center */
+@keyframes smooth-popup {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

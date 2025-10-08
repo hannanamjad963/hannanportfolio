@@ -1,6 +1,6 @@
 /* Popup animation optimized */
 .popup {
-    animation: smooth-popup 1s cubic-bezier(0.4, 0, 0.2, 1) both, fadeOut 0.5s ease 2.1s forwards;
+    animation: smooth-popup 1s cubic-bezier(0.4, 0, 0.2, 1) both, fadeOut 0.5s ease 2s forwards;
 }
 
 /* Smooth pop-in from center */

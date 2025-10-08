@@ -12,9 +12,9 @@ window.addEventListener('load', function () {
 
         // Give browser a render frame before heavy JS
         requestAnimationFrame(() => {
-            setTimeout(startSiteScripts, 300);
+            setTimeout(startSiteScripts, 200);
         });
-    }, 3000);
+    }, 2000);
 });
 
 function startSiteScripts() {

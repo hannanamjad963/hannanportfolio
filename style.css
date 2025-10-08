@@ -61,7 +61,7 @@ a {
 
 #welcome-popup .popup-loading {
     position: absolute;
-    animation: popup 1s linear 2.1s both;
+    animation: popup 1s linear 2s both;
 }
 
 @keyframes popup {
@@ -1130,7 +1130,10 @@ footer .footer-content h1 {
     }
 
     .hero {
-        background: linear-gradient(180deg, #071024 0%, #07132a 60%);
+        background: url(images/bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         text-align: center;
         height: auto;
         width: 100%;
@@ -1265,6 +1268,10 @@ footer .footer-content h1 {
     .about .about-main .about-gif {
         width: 100%;
         height: auto;
+    }
+
+    .about .about-main .about-gif .about-gif-img {
+        animation: none;
     }
 
     .about .about-main .about-item {

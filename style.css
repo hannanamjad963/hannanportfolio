@@ -209,6 +209,10 @@ a {
     padding: 150px 50px;
     width: 100%;
     height: auto;
+    background: url(images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HTML</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <a href="../../index.html">
+                <div class="header-logo">
+                    <h1>HA</h1>
+                </div>
+            </a>
+            <div class="header-logo-item">
+                <a href="../../index.html">
+                    <h1>Hannan Amjad</h1>
+                </a>
+                <p>Full‑Stack Web Developer</p>
+            </div>
+        </div>
+        <div class="header-items">
+            <nav>
+                <a class="animate-on-scroll" href="../../index.html#home" class="active">Home</a>
+                <a class="animate-on-scroll" href="../../index.html#about">About</a>
+                <a class="animate-on-scroll" href="../../index.html#portfolio">Portfolio</a>
+                <a class="animate-on-scroll" href="../../index.html#contact">Contact</a>
+            </nav>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+
+    </header>
+
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-on-scroll');
+
+        function checkScroll() {
+            const triggerPoint = window.innerHeight * 1.01;
+            boxes.forEach(box => {
+                const rect = box.getBoundingClientRect();
+                if (rect.top < triggerPoint && rect.bottom > 0) {
+                    box.classList.add('show');
+                } else {
+                    box.classList.remove('show');
+                }
+            });
+        }
+
+        // Throttle scroll listener for better FPS
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (!scrollTimeout) {
+                scrollTimeout = setTimeout(() => {
+                    checkScroll();
+                    scrollTimeout = null;
+                }, 100);
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', checkScroll);
+        checkScroll(); // run once immediately
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.header .header-items nav');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+            navMenu.addEventListener('click', e => {
+                if (e.target.tagName === 'A') navMenu.classList.remove('show');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (ev) => {
+                if (!navMenu.contains(ev.target) && !navToggle.contains(ev.target)) {
+                    navMenu.classList.remove('show');
+                }
+                checkScroll();
+            });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -16,6 +16,16 @@ body {
     max-width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    background: #07132a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5a6bff;
+    border-radius: 10px;
+}
+
 section,
 div {
     max-width: 100%;
@@ -47,7 +57,7 @@ a {
 
 #welcome-popup.hide {
     opacity: 0;
-    transform: scale(4);
+    transform: scale(2);
     pointer-events: none;
     visibility: hidden;
 }
@@ -61,7 +71,7 @@ a {
 
 #welcome-popup .popup-loading {
     position: absolute;
-    animation: popup 1s linear 2s both;
+    animation: popup .2s linear 3s both;
 }
 
 @keyframes popup {
@@ -173,6 +183,22 @@ a {
     color: transparent;
 }
 
+.header .header-items nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
+    transform: scale(0);
+    transition: .3s;
+}
+
+.header .header-items nav a:hover::before {
+    transform: scale(1);
+}
+
 
 .header .header-items nav a.active::before {
     content: "";
@@ -184,10 +210,6 @@ a {
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
     transform: scale(1);
     transition: .3s;
-}
-
-.header .header-items nav a:hover::before {
-    transform: scale(1.2);
 }
 
 
@@ -419,18 +441,8 @@ a {
     width: 100%;
     max-width: 100%;
     filter: drop-shadow(0px 0px 2px #9fa8f5);
-    animation: gifabout 4s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes gifabout {
-    from {
-        transform: translateY(-40px);
-    }
-
-    to {
-        transform: translateY(-20px);
-    }
-}
 
 .about .about-main .about-item {
     width: 50%;
@@ -525,11 +537,12 @@ a {
 /* Portfolio start */
 .portfolio {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 
@@ -582,8 +595,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .portfolio .tab .tab-button {
@@ -625,7 +638,7 @@ a {
 
 .portfolio .content {
     width: 100%;
-    height: calc(100vh - 270px);
+    height: auto;
 }
 
 .portfolio .content .content-all {
@@ -642,12 +655,12 @@ a {
 /* Skills */
 .portfolio .content .content-all .skill-container {
     width: 100%;
-    height: calc(100vh - 270px);
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0px 80px;
+    gap: 80px;
     padding: 30px;
 }
 
@@ -758,31 +771,31 @@ a {
 
 /* certificates */
 .portfolio .content .content-all .certificates-container {
-    width: 100%;
-    height: calc(100vh - 270px);
-    padding: 5px 50px;
+    width: 80rem;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 10px 100px;
+    gap: 100px;
+    padding: 5px 1px;
     align-items: center;
 }
 
 .portfolio .content .content-all .certificates-container .certificates-item {
-    width: 300px;
+    width: 350px;
     height: 250px;
     border: 2px solid yellow;
 }
 
 /* Projects */
 .portfolio .content .content-all .projects-container {
-    width: 100%;
-    height: calc(100vh - 270px);
-    padding: 10px 50px;
+    width: 80rem;
+    height: auto;
+    padding: 15px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 100px;
+    gap: 100px;
     align-items: center;
 }
 
@@ -866,7 +879,7 @@ a {
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    box-shadow: 0px 0px 5px 8px rgb(48, 48, 48);
+    box-shadow: 1px 1px 5px #7c88f8;
     cursor: pointer;
     opacity: 0;
     transform: translateY(150px);
@@ -884,7 +897,7 @@ a {
 }
 
 .contact .contact-section-1 .contact-main .contact-main-item:hover {
-    box-shadow: 0px 0px 5px 8px #5a6bff;
+    box-shadow: 0px 0px 10px 5px #5a6bff;
 }
 
 .contact .contact-section-1 .contact-main .contact-main-item .fa-solid {
@@ -923,7 +936,7 @@ a {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 0px 5px 5px rgb(56, 56, 56);
+    box-shadow: 1px 1px 5px #7c88f8;
     font-size: 1.2rem;
     transform: translate(-150px, 50px);
     opacity: 0;
@@ -1066,11 +1079,11 @@ textarea:-webkit-autofill {
     padding: 12px 15px;
     border: none;
     cursor: pointer;
-    background-color: white;
+    background-color: #7c88f8;
     color: black;
     transform: translateY(100px);
     opacity: 0;
-    transition: opacity .8s, transform .8s, background-color .3s, color .3s, box-shadow .3s;
+    transition: opacity .8s, transform .8s, background-color .3s ease, color .3s ease, box-shadow .3s ease;
 }
 
 .contact .contact-section-1 .contact-area .contact-area-section .contact-area-btn button.show {
@@ -1079,9 +1092,9 @@ textarea:-webkit-autofill {
 }
 
 .contact .contact-section-1 .contact-area .contact-area-section .contact-area-btn button:hover {
-    background-color: black;
+    background-color: #5a6bff;
     color: white;
-    box-shadow: 0px 1px 5px 5px rgb(58, 58, 58);
+    box-shadow: 0px 0px 10px 5px #7c88f8;
 }
 
 footer {
@@ -1120,17 +1133,17 @@ footer .footer-content h1 {
         margin-top: 0px;
     }
 
-    .header .header-main h1 {
+    .header .header-main .header-logo h1 {
         font-size: 1.4rem;
     }
 
     .header .header-main {
-        margin-left: 2.5rem;
+        margin-left: 2rem;
     }
 
 
     .header .header-items nav a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .hero {
@@ -1181,9 +1194,16 @@ footer .footer-content h1 {
 
     .about .about-main {
         height: auto;
+        flex-direction: column;
+    }
+
+    .about .about-main .about-gif {
+        width: 65%;
+        height: auto;
     }
 
     .about .about-main .about-item {
+        width: 100%;
         height: auto;
     }
 }
@@ -1199,12 +1219,16 @@ footer .footer-content h1 {
         overflow: visible;
     }
 
-    .header .header-main {
-        margin-left: 2rem;
+    .header .header-main .header-logo h1 {
+        font-size: 1.2rem;
     }
 
-    .header .header-main h1 {
-        font-size: 1.7rem;
+    .header .header-main .header-logo-item a h1 {
+        font-size: 1rem;
+    }
+
+    .header .header-main .header-logo-item p {
+        font-size: 0.8rem;
     }
 
     .header .header-items nav {
@@ -1304,46 +1328,36 @@ footer .footer-content h1 {
         margin-bottom: 50px;
     }
 
-    .portfolio {
-        height: auto;
-    }
-
-    .portfolio .tab .tab-button {
-        font-size: 0.8rem;
-    }
-
-    .portfolio .content {
-        height: auto;
-    }
-
     .portfolio .content .content-all .skill-container {
-        height: auto;
         gap: 40px;
+        padding: 30px 10px;
     }
 
     .portfolio .content .content-all .skill-container .skill-item {
-        width: 70px;
+        width: 100px;
+    }
+
+    .portfolio .content .content-all .skill-container .skill-item h1 {
+        font-size: 0.8rem;
     }
 
     .portfolio .content .content-all .certificates-container {
-        height: auto;
-        gap: 15px 20px;
-        padding: 5px 10px;
+        gap: 40px;
+        padding: 10px 5px;
     }
 
     .portfolio .content .content-all .certificates-container .certificates-item {
-        width: 150px;
+        width: 250px;
         height: 150px;
     }
 
     .portfolio .content .content-all .projects-container {
-        height: auto;
-        gap: 15px 20px;
-        padding: 5px 10px;
+        gap: 40px;
     }
 
-    .portfolio .content .content-all .projects-container .project-item {
-        width: 150px;
+    .contact .contact-section-1 .contact-area {
+        flex-direction: column;
+        padding: 10px 0px;
     }
 
     .contact .contact-section-1 .contact-area .contact-area-section form {
@@ -1356,8 +1370,6 @@ footer .footer-content h1 {
     .contact .contact-section-1 .contact-area .contact-area-section .contact-area-system {
         gap: 15px;
     }
-
-    .contact .contact-section-1 .contact-area .contact-area-section .contact-area-type input {}
 
     .contact .contact-section-1 .contact-area .contact-area-section .contact-area-type textarea {
         width: 270px;

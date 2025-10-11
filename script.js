@@ -3,18 +3,14 @@ window.addEventListener('load', function () {
     const popup = document.getElementById('welcome-popup');
 
     // Scroll top (prevent start from middle)
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
+    // document.body.scrollTop = 0;
 
     // Wait 3s for loader, then hide smoothly and start scripts
     setTimeout(() => {
         popup.classList.add('hide');
-
-        // Give browser a render frame before heavy JS
-        requestAnimationFrame(() => {
-            setTimeout(startSiteScripts, 200);
-        });
-    }, 2000);
+        startSiteScripts()
+    }, 3500);
 });
 
 function startSiteScripts() {
@@ -81,10 +77,10 @@ function startSiteScripts() {
     const boxes = document.querySelectorAll('.animate-on-scroll');
 
     function checkScroll() {
-        const triggerPoint = window.innerHeight * 1.01;
+        const triggerPoint = window.innerHeight * 1.09;
         boxes.forEach(box => {
             const rect = box.getBoundingClientRect();
-            if (rect.top < triggerPoint && rect.bottom > 0) {
+            if (rect.top <= triggerPoint && rect.bottom > 0) {
                 box.classList.add('show');
             } else {
                 box.classList.remove('show');

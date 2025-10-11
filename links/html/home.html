@@ -1,0 +1,159 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HTML</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <a href="../../index.html">
+                <div class="header-logo">
+                    <h1>HA</h1>
+                </div>
+            </a>
+            <div class="header-logo-item">
+                <a href="../../index.html">
+                    <h1>Hannan Amjad</h1>
+                </a>
+                <p>Full‑Stack Web Developer</p>
+            </div>
+        </div>
+        <div class="header-items">
+            <nav>
+                <a class="animate-on-scroll" href="../../index.html#home" class="active">Home</a>
+                <a class="animate-on-scroll" href="../../index.html#about">About</a>
+                <a class="animate-on-scroll" href="../../index.html#portfolio">Portfolio</a>
+                <a class="animate-on-scroll" href="../../index.html#contact">Contact</a>
+            </nav>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+    </header>
+
+    <!-- Header end -->
+    <!-- HTMl Section Start -->
+
+    <section class="html">
+        <div class="html-main">
+            <i class="fa-brands fa-html5 animate-on-scroll"></i>
+            <h1 class="animate-on-scroll">HTML - The Foundation of the Web</h1>
+            <p class="animate-on-scroll">Learn how HTML gives structure and meaning to web content.</p>
+        </div>
+        <div class="html-section1">
+            <div class="html-skills animate-on-scroll">
+                <h2>My HTML Skill Level</h2>
+                <p>I have a strong understanding of HTML5 and can easily create responsive, semantic, and accessible web
+                    pages.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+            </div>
+
+            <div class="html-explain animate-on-scroll">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Defines structure of web pages</li>
+                    <li>Works with CSS and JavaScript</li>
+                    <li>Supports multimedia (images, audio, video)</li>
+                    <li>Semantic and SEO-friendly</li>
+                </ul>
+            </div>
+        </div>
+        <div class="html-section2">
+            <div class="html-features animate-on-scroll">
+                <h2>What is HTML?</h2>
+                <p>HTML (HyperText Markup Language) is the core building block of web pages. It defines the
+                    structure of
+                    your
+                    website and organizes content into elements like headings, paragraphs, links, and images.</p>
+            </div>
+
+
+            <div class="html-use animate-on-scroll">
+                <h2>Where is HTML Used?</h2>
+                <p>HTML is used in almost everything on the web — websites, emails, web apps, documentation, and
+                    more.
+                </p>
+            </div>
+        </div>
+        <div class="html-more animate-on-scroll">
+            <h2>Learn More</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Guide</a>
+                </li>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+            </ul>
+        </div>
+        <a class="anchor animate-on-scroll" href="../../index.html">← Back to Home</a>
+    </section>
+    <!-- HTML END -->
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-content">
+            <h1>© 2025 Hannan Amjad | Portfolio Website | Created by Hannan Developer</h1>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-on-scroll');
+
+        function checkScroll() {
+            const triggerPoint = window.innerHeight * 1.1;
+            boxes.forEach(box => {
+                const rect = box.getBoundingClientRect();
+                if (rect.top < triggerPoint && rect.bottom > 0) {
+                    box.classList.add('show');
+                } else {
+                    box.classList.remove('show');
+                }
+            });
+        }
+
+        // Throttle scroll listener for better FPS
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (!scrollTimeout) {
+                scrollTimeout = setTimeout(() => {
+                    checkScroll();
+                    scrollTimeout = null;
+                }, 100);
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', checkScroll);
+        checkScroll(); // run once immediately
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.header .header-items nav');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+            navMenu.addEventListener('click', e => {
+                if (e.target.tagName === 'A') navMenu.classList.remove('show');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (ev) => {
+                if (!navMenu.contains(ev.target) && !navToggle.contains(ev.target)) {
+                    navMenu.classList.remove('show');
+                }
+                checkScroll();
+            });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Expertise | Hannan Amjad | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <a href="../../index.html">
+                <div class="header-logo">
+                    <h1>HA</h1>
+                </div>
+            </a>
+            <div class="header-logo-item">
+                <a href="../../index.html">
+                    <h1>Hannan Amjad</h1>
+                </a>
+                <p>Full‑Stack Web Developer</p>
+            </div>
+        </div>
+        <div class="header-items">
+            <nav>
+                <a class="animate-on-scroll" href="../../index.html#home" class="active">Home</a>
+                <a class="animate-on-scroll" href="../../index.html#about">About</a>
+                <a class="animate-on-scroll" href="../../index.html#portfolio">Portfolio</a>
+                <a class="animate-on-scroll" href="../../index.html#contact">Contact</a>
+            </nav>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+    </header>
+
+    <!-- Header end -->
+    <section class="skills">
+        <div class="skills-main">
+            <a href="../html/html.html"><button id="skills-link1" class="animate-on-scroll">HTML <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img1"></i></button></a>
+            <a href="css.html"> <button id="skills-link2" class="animate-on-scroll active">CSS <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img2"></i></button></a>
+            <a href="links/JavaScript/home.html"> <button id="skills-link3" class="animate-on-scroll">JavaScript
+                    <i class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img3"></i></button></a>
+            <a href="links/php/home.html"><button id="skills-link4" class="animate-on-scroll">Jquery <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img4"></i></button></a>
+            <a href="links/bootstrap/home.html"><button id="skills-link5" class="animate-on-scroll">Bootstrap <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img5"></i></button></a>
+            <a href="links/My SQL/home.html"><button id="skills-link6" class="animate-on-scroll">My SQL <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img6"></i></button></a>
+            <a href="links/php/home.html"><button id="skills-link7" class="animate-on-scroll">PHP <i
+                        class="fa-solid fa-arrow-up-right-from-square skills-link"
+                        id="skills-link-img7"></i></button></a>
+        </div>
+    </section>
+    <!-- HTMl Section Start -->
+
+    <section class="html">
+        <div class="html-main">
+            <i class="fa-brands fa-css3 animate-on-scroll"></i>
+            <h1 class="animate-on-scroll">CSS - The Style of the Web</h1>
+            <p class="animate-on-scroll">Learn how CSS adds design, color, and layout to your web pages.</p>
+        </div>
+
+        <div class="html-section1">
+            <div class="html-skills animate-on-scroll">
+                <h2>My CSS Skill Level</h2>
+                <p>I have a strong understanding of CSS3 and can easily create responsive, modern, and animated web
+                    designs.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress"></div>
+                </div>
+                <div class="skill-percent">85%</div>
+            </div>
+
+            <div class="html-explain animate-on-scroll">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Controls layout and styling of web pages</li>
+                    <li>Works with HTML and JavaScript</li>
+                    <li>Supports animations, transitions, and effects</li>
+                    <li>Responsive and mobile-friendly design</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="html-section2">
+            <div class="html-features animate-on-scroll">
+                <h2>What is CSS?</h2>
+                <p>CSS (Cascading Style Sheets) defines how HTML elements are displayed. It lets you control colors,
+                    spacing, fonts, and layout across the entire website easily.</p>
+            </div>
+
+            <div class="html-use animate-on-scroll">
+                <h2>Where is CSS Used?</h2>
+                <p>CSS is used in all types of web design — from websites and web apps to emails and user interfaces —
+                    making them attractive and user-friendly.</p>
+            </div>
+        </div>
+
+        <div class="html-more animate-on-scroll">
+            <h2>Learn More</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Guide</a></li>
+                <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+            </ul>
+        </div>
+        <a class="anchor animate-on-scroll" href="../../index.html">← Back to Home</a>
+    </section>
+    <!-- HTML END -->
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-content">
+            <h1>© 2025 Hannan Amjad | Portfolio Website | Created by Hannan Developer</h1>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#skills-link1").hover(function () {
+                $("#skills-link-img1").toggle(200);
+            });
+            $("#skills-link2").add(function () {
+                $("#skills-link-img2").show(200);
+            });
+            $("#skills-link3").hover(function () {
+                $("#skills-link-img3").toggle(200);
+            });
+            $("#skills-link4").hover(function () {
+                $("#skills-link-img4").toggle(200);
+            });
+            $("#skills-link5").hover(function () {
+                $("#skills-link-img5").toggle(200);
+            });
+            $("#skills-link6").hover(function () {
+                $("#skills-link-img6").toggle(200);
+            });
+            $("#skills-link7").hover(function () {
+                $("#skills-link-img7").toggle(200);
+            });
+        });
+    </script>
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-on-scroll');
+
+        function checkScroll() {
+            const triggerPoint = window.innerHeight * 1.1;
+            boxes.forEach(box => {
+                const rect = box.getBoundingClientRect();
+                if (rect.top < triggerPoint && rect.bottom > 0) {
+                    box.classList.add('show');
+                } else {
+                    box.classList.remove('show');
+                }
+            });
+        }
+
+        // Throttle scroll listener for better FPS
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (!scrollTimeout) {
+                scrollTimeout = setTimeout(() => {
+                    checkScroll();
+                    scrollTimeout = null;
+                }, 100);
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', checkScroll);
+        checkScroll(); // run once immediately
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.header .header-items nav');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+            navMenu.addEventListener('click', e => {
+                if (e.target.tagName === 'A') navMenu.classList.remove('show');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (ev) => {
+                if (!navMenu.contains(ev.target) && !navToggle.contains(ev.target)) {
+                    navMenu.classList.remove('show');
+                }
+                checkScroll();
+            });
+        }
+
+    </script>
+</body>
+
+</html>

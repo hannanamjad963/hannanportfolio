@@ -233,9 +233,9 @@ a {
 }
 
 
-/* HTML Section */
+/*js Section */
 
-.html {
+.js {
     width: 100%;
     height: auto;
     padding-top: 20px;
@@ -249,7 +249,7 @@ a {
     overflow: hidden;
 }
 
-.html .html-main {
+.js .js-main {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -259,20 +259,20 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-main .fa-brands {
+.js .js-main .fa-brands {
     font-size: 5rem;
-    color: #ff7043;
+    color: #5a6bff;
     opacity: 0;
     transform: translateY(-150px);
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main .fa-brands.show {
+.js .js-main .fa-brands.show {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.html .html-main h1 {
+.js .js-main h1 {
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -282,25 +282,26 @@ a {
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main h1.show {
+.js .js-main h1.show {
     opacity: 1;
     transform: scale(1);
 }
 
-.html .html-main p {
+.js .js-main p {
     font-size: 1.2rem;
     color: #94a3b8;
+    text-align: center;
     opacity: 0;
     transform: translateX(-150px);
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main p.show {
+.js .js-main p.show {
     opacity: 1;
     transform: translateX(0px);
 }
 
-.html .html-section1 {
+.js .js-section1 {
     width: 100%;
     height: auto;
     display: flex;
@@ -310,7 +311,7 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-section1 .html-skills {
+.js .js-section1 .js-skills {
     width: 45%;
     height: 170px;
     display: flex;
@@ -326,25 +327,25 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-section1 .html-skills.show {
+.js .js-section1 .js-skills.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section1 .html-skills:hover {
+.js .js-section1 .js-skills:hover {
     transform: translateY(-8px);
     transition: transform .3s;
 }
 
-.html .html-section1 .html-skills h2 {
-    width: 17ch;
+.js .js-section1 .js-skills h2 {
+    width: 20ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section1 .html-skills h2::before {
+.js .js-section1 .js-skills h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -355,12 +356,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section1 .html-skills p {
+.js .js-section1 .js-skills p {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-section1 .html-skills .skill-bar {
+.js .js-section1 .js-skills .skill-bar {
     margin: 5px 0px;
     width: 100%;
     height: auto;
@@ -368,8 +369,8 @@ a {
     border-radius: 12px;
 }
 
-.html .html-section1 .html-skills .skill-bar .skill-progress {
-    width: 85%;
+.js .js-section1 .js-skills .skill-bar .skill-progress {
+    width: 80%;
     height: 12px;
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
     border-radius: 12px;
@@ -382,20 +383,19 @@ a {
     }
 
     to {
-        width: 90%;
+        width: 80%;
     }
 }
 
 
-
-.html .html-section1 .html-skills .skill-percent {
+.js .js-section1 .js-skills .skill-percent {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
 }
 
-.html .html-section1 .html-explain {
+.js .js-section1 .js-explain {
     width: 45%;
     height: 170px;
     display: flex;
@@ -410,17 +410,17 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-section1 .html-explain.show {
+.js .js-section1 .js-explain.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section1 .html-explain:hover {
+.js .js-section1 .js-explain:hover {
     transform: translateY(-8px);
     transition: transform .3s;
 }
 
-.html .html-section1 .html-explain h2 {
+.js .js-section1 .js-explain h2 {
     width: 10.5ch;
     font-size: 1.7rem;
     color: #5a6bff;
@@ -428,7 +428,7 @@ a {
     position: relative;
 }
 
-.html .html-section1 .html-explain h2::before {
+.js .js-section1 .js-explain h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -439,13 +439,13 @@ a {
     transform: scale(1);
 }
 
-.html .html-section1 .html-explain ul {
+.js .js-section1 .js-explain ul {
     font-size: 1rem;
     padding-left: 30px;
     color: #94a3b8;
 }
 
-.html .html-section2 {
+.js .js-section2 {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -454,7 +454,7 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-section2 .html-features {
+.js .js-section2 .js-features {
     width: 45%;
     height: 150px;
     display: flex;
@@ -469,26 +469,26 @@ a {
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.html .html-section2 .html-features.show {
+.js .js-section2 .js-features.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section2 .html-features:hover {
+.js .js-section2 .js-features:hover {
     transform: translateY(-8px);
     transition: transform .3s;
     transition-delay: 0s !important;
 }
 
-.html .html-section2 .html-features h2 {
-    width: 12.3ch;
+.js .js-section2 .js-features h2 {
+    width: 15.7ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section2 .html-features h2::before {
+.js .js-section2 .js-features h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -499,12 +499,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section2 .html-features p {
+.js .js-section2 .js-features p {
     font-size: 0.8rem;
     color: #94a3b8;
 }
 
-.html .html-section2 .html-use {
+.js .js-section2 .js-use {
     width: 45%;
     height: 150px;
     display: flex;
@@ -519,26 +519,26 @@ a {
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.html .html-section2 .html-use.show {
+.js .js-section2 .js-use.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section2 .html-use:hover {
+.js .js-section2 .js-use:hover {
     transform: translateY(-8px);
     transition: transform .2s;
     transition-delay: 0s !important;
 }
 
-.html .html-section2 .html-use h2 {
-    width: 18ch;
+.js .js-section2 .js-use h2 {
+    width: 21.2ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section2 .html-use h2::before {
+.js .js-section2 .js-use h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -549,12 +549,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section2 .html-use p {
+.js .js-section2 .js-use p {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-more {
+.js .js-more {
     width: 50%;
     height: 150px;
     display: flex;
@@ -570,17 +570,17 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-more.show {
+.js .js-more.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-.html .html-more:hover {
+.js .js-more:hover {
     transform: translateY(-8px);
     transition: transform .3s !important;
 }
 
-.html .html-more h2 {
+.js .js-more h2 {
     width: 9.5ch;
     font-size: 1.7rem;
     color: #5a6bff;
@@ -588,7 +588,7 @@ a {
     position: relative;
 }
 
-.html .html-more h2::before {
+.js .js-more h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -599,30 +599,30 @@ a {
     transform: scale(1);
 }
 
-.html .html-more ul {
+.js .js-more ul {
     padding-left: 30px;
     color: #94a3b8;
 }
 
-.html .html-more ul li a {
+.js .js-more ul li a {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-more ul li a:hover {
+.js .js-more ul li a:hover {
     text-decoration: underline #94a3b8;
 }
 
-.html .html-more ul li a:link {
+.js .js-more ul li a:link {
     color: #94a3b8;
 }
 
-.html .html-more ul li a:visited {
+.js .js-more ul li a:visited {
     color: purple;
     text-decoration: underline purple;
 }
 
-.html .anchor {
+.js .anchor {
     padding: 15px 30px;
     border-radius: 12px;
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
@@ -632,12 +632,12 @@ a {
     margin-bottom: 20px;
 }
 
-.html .anchor.show {
+.js .anchor.show {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.html .anchor:hover {
+.js .anchor:hover {
     color: #07132a;
     transform: scale(1.1);
     transition: color .3s, transform .3s !important;
@@ -689,48 +689,48 @@ footer .footer-content h1 {
         font-size: 0.9rem;
     }
 
-    .html {
+    .js {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .html .html-main {
+    .js .js-main {
         width: 100%;
     }
 
-    .html .html-main h1 {
+    .js .js-main h1 {
         font-size: 2rem;
         text-align: center;
     }
 
-    .html .html-main p {
+    .js .js-main p {
         font-size: 1.2rem;
         text-align: center;
     }
 
-    .html .html-section1 {
+    .js .js-section1 {
         margin-bottom: 0px;
     }
 
-    .html .html-section2 {
+    .js .js-section2 {
         margin-bottom: 0px;
     }
 
-    .html .html-section1 .html-skills,
-    .html .html-section1 .html-explain,
-    .html .html-section2 .html-features,
-    .html .html-section2 .html-use,
-    .html .html-more {
+    .js .js-section1 .js-skills,
+    .js .js-section1 .js-explain,
+    .js .js-section2 .js-features,
+    .js .js-section2 .js-use,
+    .js .js-more {
         width: 100%;
         margin-bottom: 20px;
         padding: 15px 30px;
     }
 
-    .html .html-section1 .html-skills h2,
-    .html .html-section1 .html-explain h2,
-    .html .html-section2 .html-features h2,
-    .html .html-section2 .html-use h2,
-    .html .html-more h2 {
+    .js .js-section1 .js-skills h2,
+    .js .js-section1 .js-explain h2,
+    .js .js-section2 .js-features h2,
+    .js .js-section2 .js-use h2,
+    .js .js-more h2 {
         font-size: 2rem;
     }
 }
@@ -794,48 +794,48 @@ footer .footer-content h1 {
         display: none;
     }
 
-    .html {
+    .js {
         padding-top: 80px;
         padding-left: 5px;
         padding-right: 5px;
     }
 
-    .html .html-main {
+    .js .js-main {
         width: 100%;
     }
 
-    .html .html-main h1 {
+    .js .js-main h1 {
         font-size: 1.1rem;
     }
 
-    .html .html-main p {
+    .js .js-main p {
         font-size: 0.8rem;
         text-align: center;
     }
 
-    .html .html-section1 {
+    .js .js-section1 {
         margin-bottom: 0px;
     }
 
-    .html .html-section2 {
+    .js .js-section2 {
         margin-bottom: 0px;
     }
 
-    .html .html-section1 .html-skills,
-    .html .html-section1 .html-explain,
-    .html .html-section2 .html-features,
-    .html .html-section2 .html-use,
-    .html .html-more {
+    .js .js-section1 .js-skills,
+    .js .js-section1 .js-explain,
+    .js .js-section2 .js-features,
+    .js .js-section2 .js-use,
+    .js .js-more {
         width: 100%;
         margin-bottom: 20px;
         padding: 5px 10px;
     }
 
-    .html .html-section1 .html-skills h2,
-    .html .html-section1 .html-explain h2,
-    .html .html-section2 .html-features h2,
-    .html .html-section2 .html-use h2,
-    .html .html-more h2 {
+    .js .js-section1 .js-skills h2,
+    .js .js-section1 .js-explain h2,
+    .js .js-section2 .js-features h2,
+    .js .js-section2 .js-use h2,
+    .js .js-more h2 {
         font-size: 1.2rem;
     }
 

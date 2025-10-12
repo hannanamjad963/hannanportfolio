@@ -43,10 +43,10 @@
             <a href="../html/html.html"><button id="skills-link1" class="animate-on-scroll">HTML <i
                         class="fa-solid fa-arrow-up-right-from-square skills-link"
                         id="skills-link-img1"></i></button></a>
-            <a href="css.html"> <button id="skills-link2" class="animate-on-scroll active">CSS <i
+            <a href="../CSS/css.html"> <button id="skills-link2" class="animate-on-scroll">CSS <i
                         class="fa-solid fa-arrow-up-right-from-square skills-link"
                         id="skills-link-img2"></i></button></a>
-            <a href="../JavaScript/javascript.html"> <button id="skills-link3" class="animate-on-scroll">JavaScript
+            <a href="javascript.html"> <button id="skills-link3" class="animate-on-scroll active">JavaScript
                     <i class="fa-solid fa-arrow-up-right-from-square skills-link"
                         id="skills-link-img3"></i></button></a>
             <a href="links/php/home.html"><button id="skills-link4" class="animate-on-scroll">Jquery <i
@@ -63,62 +63,67 @@
                         id="skills-link-img7"></i></button></a>
         </div>
     </section>
-    <!-- CSS Section Start -->
+    <!-- js Section Start -->
 
-    <section class="css">
-        <div class="css-main">
-            <i class="fa-brands fa-css3 animate-on-scroll"></i>
-            <h1 class="animate-on-scroll">CSS - The Style of the Web</h1>
-            <p class="animate-on-scroll">Learn how CSS adds design, color, and layout to your web pages.</p>
+    <section class="js">
+        <div class="js-main">
+            <i class="fa-brands fa-js animate-on-scroll"></i>
+            <h1 class="animate-on-scroll">JavaScript - The Brain of the Web</h1>
+            <p class="animate-on-scroll">Learn how JavaScript brings interactivity and dynamic behavior to your web
+                pages.
+            </p>
         </div>
 
-        <div class="css-section1">
-            <div class="css-skills animate-on-scroll">
-                <h2>My CSS Skill Level</h2>
-                <p>I have a strong understanding of CSS3 and can easily create responsive, modern, and animated web
-                    designs.
-                </p>
+        <div class="js-section1">
+            <div class="js-skills animate-on-scroll">
+                <h2>My JavaScript Skill Level</h2>
+                <p>I have a strong understanding of JavaScript (ES6+) and can build interactive, efficient, and dynamic
+                    web
+                    applications.</p>
                 <div class="skill-bar">
                     <div class="skill-progress"></div>
                 </div>
-                <div class="skill-percent">85%</div>
+                <div class="skill-percent">80%</div>
             </div>
 
-            <div class="css-explain animate-on-scroll">
+            <div class="js-explain animate-on-scroll">
                 <h2>Key Features</h2>
                 <ul>
-                    <li>Controls layout and styling of web pages</li>
-                    <li>Works with HTML and JavaScript</li>
-                    <li>Supports animations, transitions, and effects</li>
-                    <li>Responsive and mobile-friendly design</li>
+                    <li>Adds interactivity and logic to web pages</li>
+                    <li>Works seamlessly with HTML and CSS</li>
+                    <li>Supports animations, events, and APIs</li>
+                    <li>Essential for front-end and back-end development</li>
                 </ul>
             </div>
         </div>
 
-        <div class="css-section2">
-            <div class="css-features animate-on-scroll">
-                <h2>What is CSS?</h2>
-                <p>CSS (Cascading Style Sheets) defines how HTML elements are displayed. It lets you control colors,
-                    spacing, fonts, and layout across the entire website easily.</p>
+        <div class="js-section2">
+            <div class="js-features animate-on-scroll">
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript is a programming language that allows you to create dynamic, interactive elements on web
+                    pages
+                    — from animations to real-time updates.</p>
             </div>
 
-            <div class="css-use animate-on-scroll">
-                <h2>Where is CSS Used?</h2>
-                <p>CSS is used in all types of web design — from websites and web apps to emails and user interfaces —
-                    making them attractive and user-friendly.</p>
+            <div class="js-use animate-on-scroll">
+                <h2>Where is JavaScript Used?</h2>
+                <p>JavaScript is used in all areas of web development — from websites and web apps to mobile apps and
+                    server-side programming — making it one of the most versatile languages in the world.</p>
             </div>
         </div>
 
-        <div class="css-more animate-on-scroll">
+        <div class="js-more animate-on-scroll">
             <h2>Learn More</h2>
             <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Guide</a></li>
-                <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript
+                        Guide</a></li>
+                <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools JavaScript Tutorial</a></li>
             </ul>
         </div>
         <a class="anchor animate-on-scroll" href="../../index.html">← Back to Home</a>
     </section>
-    <!-- css END -->
+
+    <!-- js END -->
     <!-- Footer -->
 
     <footer>
@@ -134,11 +139,11 @@
             $("#skills-link1").hover(function () {
                 $("#skills-link-img1").toggle(200);
             });
-            $("#skills-link2").add(function () {
-                $("#skills-link-img2").show(200);
+            $("#skills-link2").hover(function () {
+                $("#skills-link-img2").toggle(200);
             });
-            $("#skills-link3").hover(function () {
-                $("#skills-link-img3").toggle(200);
+            $("#skills-link3").add(function () {
+                $("#skills-link-img3").show(200);
             });
             $("#skills-link4").hover(function () {
                 $("#skills-link-img4").toggle(200);

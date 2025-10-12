@@ -196,7 +196,7 @@ a {
     opacity: 0;
     transform: translateY(150px);
     box-shadow: 1px 1px 5px #7c88f8;
-    transition: box-shadow .3s, color .3s, transform .8s .3s, opacity .8s .3s;
+    transition: box-shadow .3s, color .3s, transform .8s .2s, opacity .8s .2s;
 }
 
 .skills-main a button.show {
@@ -211,15 +211,15 @@ a {
 }
 
 .skills-main a:nth-child(2) button {
-    transition: box-shadow .3s, transform .8s .6s, opacity .8s .6s;
+    transition: box-shadow .3s, transform .8s .4s, opacity .8s .4s;
 }
 
 .skills-main a:nth-child(4) button {
-    transition: box-shadow .3s, transform .8s .6s, opacity .8s .6s;
+    transition: box-shadow .3s, transform .8s .4s, opacity .8s .4s;
 }
 
 .skills-main a:nth-child(6) button {
-    transition: box-shadow .3s, transform .8s .6s, opacity .8s .6s;
+    transition: box-shadow .3s, transform .8s .4s, opacity .8s .4s;
 }
 
 .skills-main button .skills-link {
@@ -233,9 +233,9 @@ a {
 }
 
 
-/* HTML Section */
+/*css Section */
 
-.html {
+.css {
     width: 100%;
     height: auto;
     padding-top: 20px;
@@ -249,7 +249,7 @@ a {
     overflow: hidden;
 }
 
-.html .html-main {
+.css .css-main {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -259,7 +259,7 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-main .fa-brands {
+.css .css-main .fa-brands {
     font-size: 5rem;
     color: #5a6bff;
     opacity: 0;
@@ -267,12 +267,12 @@ a {
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main .fa-brands.show {
+.css .css-main .fa-brands.show {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.html .html-main h1 {
+.css .css-main h1 {
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -282,12 +282,12 @@ a {
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main h1.show {
+.css .css-main h1.show {
     opacity: 1;
     transform: scale(1);
 }
 
-.html .html-main p {
+.css .css-main p {
     font-size: 1.2rem;
     color: #94a3b8;
     opacity: 0;
@@ -295,12 +295,12 @@ a {
     transition: opacity .8s, transform .8s;
 }
 
-.html .html-main p.show {
+.css .css-main p.show {
     opacity: 1;
     transform: translateX(0px);
 }
 
-.html .html-section1 {
+.css .css-section1 {
     width: 100%;
     height: auto;
     display: flex;
@@ -310,7 +310,7 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-section1 .html-skills {
+.css .css-section1 .css-skills {
     width: 45%;
     height: 170px;
     display: flex;
@@ -326,25 +326,25 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-section1 .html-skills.show {
+.css .css-section1 .css-skills.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section1 .html-skills:hover {
+.css .css-section1 .css-skills:hover {
     transform: translateY(-8px);
     transition: transform .3s;
 }
 
-.html .html-section1 .html-skills h2 {
-    width: 17ch;
+.css .css-section1 .css-skills h2 {
+    width: 15ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section1 .html-skills h2::before {
+.css .css-section1 .css-skills h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -355,12 +355,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section1 .html-skills p {
+.css .css-section1 .css-skills p {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-section1 .html-skills .skill-bar {
+.css .css-section1 .css-skills .skill-bar {
     margin: 5px 0px;
     width: 100%;
     height: auto;
@@ -368,7 +368,7 @@ a {
     border-radius: 12px;
 }
 
-.html .html-section1 .html-skills .skill-bar .skill-progress {
+.css .css-section1 .css-skills .skill-bar .skill-progress {
     width: 85%;
     height: 12px;
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
@@ -388,14 +388,14 @@ a {
 
 
 
-.html .html-section1 .html-skills .skill-percent {
+.css .css-section1 .css-skills .skill-percent {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
 }
 
-.html .html-section1 .html-explain {
+.css .css-section1 .css-explain {
     width: 45%;
     height: 170px;
     display: flex;
@@ -410,25 +410,25 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-section1 .html-explain.show {
+.css .css-section1 .css-explain.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section1 .html-explain:hover {
+.css .css-section1 .css-explain:hover {
     transform: translateY(-8px);
     transition: transform .3s;
 }
 
-.html .html-section1 .html-explain h2 {
-    width: 11ch;
+.css .css-section1 .css-explain h2 {
+    width: 10.5ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section1 .html-explain h2::before {
+.css .css-section1 .css-explain h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -439,13 +439,13 @@ a {
     transform: scale(1);
 }
 
-.html .html-section1 .html-explain ul {
+.css .css-section1 .css-explain ul {
     font-size: 1rem;
     padding-left: 30px;
     color: #94a3b8;
 }
 
-.html .html-section2 {
+.css .css-section2 {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -454,7 +454,7 @@ a {
     margin-bottom: 20px;
 }
 
-.html .html-section2 .html-features {
+.css .css-section2 .css-features {
     width: 45%;
     height: 150px;
     display: flex;
@@ -469,26 +469,26 @@ a {
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.html .html-section2 .html-features.show {
+.css .css-section2 .css-features.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section2 .html-features:hover {
+.css .css-section2 .css-features:hover {
     transform: translateY(-8px);
     transition: transform .3s;
     transition-delay: 0s !important;
 }
 
-.html .html-section2 .html-features h2 {
-    width: 13ch;
+.css .css-section2 .css-features h2 {
+    width: 10.5ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section2 .html-features h2::before {
+.css .css-section2 .css-features h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -499,12 +499,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section2 .html-features p {
+.css .css-section2 .css-features p {
     font-size: 0.8rem;
     color: #94a3b8;
 }
 
-.html .html-section2 .html-use {
+.css .css-section2 .css-use {
     width: 45%;
     height: 150px;
     display: flex;
@@ -519,26 +519,26 @@ a {
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.html .html-section2 .html-use.show {
+.css .css-section2 .css-use.show {
     opacity: 1;
     transform: translateX(0);
 }
 
-.html .html-section2 .html-use:hover {
+.css .css-section2 .css-use:hover {
     transform: translateY(-8px);
     transition: transform .2s;
     transition-delay: 0s !important;
 }
 
-.html .html-section2 .html-use h2 {
-    width: 18ch;
+.css .css-section2 .css-use h2 {
+    width: 16ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-section2 .html-use h2::before {
+.css .css-section2 .css-use h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -549,12 +549,12 @@ a {
     transform: scale(1);
 }
 
-.html .html-section2 .html-use p {
+.css .css-section2 .css-use p {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-more {
+.css .css-more {
     width: 50%;
     height: 150px;
     display: flex;
@@ -570,25 +570,25 @@ a {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.html .html-more.show {
+.css .css-more.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-.html .html-more:hover {
+.css .css-more:hover {
     transform: translateY(-8px);
     transition: transform .3s !important;
 }
 
-.html .html-more h2 {
-    width: 10ch;
+.css .css-more h2 {
+    width: 9.5ch;
     font-size: 1.7rem;
     color: #5a6bff;
     margin-bottom: 10px;
     position: relative;
 }
 
-.html .html-more h2::before {
+.css .css-more h2::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -599,21 +599,30 @@ a {
     transform: scale(1);
 }
 
-.html .html-more ul {
+.css .css-more ul {
     padding-left: 30px;
     color: #94a3b8;
 }
 
-.html .html-more ul li a {
+.css .css-more ul li a {
     font-size: 1rem;
     color: #94a3b8;
 }
 
-.html .html-more ul li a:visited {
-    color: purple;
+.css .css-more ul li a:hover {
+    text-decoration: underline #94a3b8;
 }
 
-.html .anchor {
+.css .css-more ul li a:link {
+    color: #94a3b8;
+}
+
+.css .css-more ul li a:visited {
+    color: purple;
+    text-decoration: underline purple;
+}
+
+.css .anchor {
     padding: 15px 30px;
     border-radius: 12px;
     background: linear-gradient(90deg, #5a6bff 0%, #B45CFF 100%);
@@ -623,12 +632,12 @@ a {
     margin-bottom: 20px;
 }
 
-.html .anchor.show {
+.css .anchor.show {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.html .anchor:hover {
+.css .anchor:hover {
     color: #07132a;
     transform: scale(1.1);
     transition: color .3s, transform .3s !important;
@@ -680,48 +689,48 @@ footer .footer-content h1 {
         font-size: 0.9rem;
     }
 
-    .html {
+    .css {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .html .html-main {
+    .css .css-main {
         width: 100%;
     }
 
-    .html .html-main h1 {
+    .css .css-main h1 {
         font-size: 2rem;
         text-align: center;
     }
 
-    .html .html-main p {
+    .css .css-main p {
         font-size: 1.2rem;
         text-align: center;
     }
 
-    .html .html-section1 {
+    .css .css-section1 {
         margin-bottom: 0px;
     }
 
-    .html .html-section2 {
+    .css .css-section2 {
         margin-bottom: 0px;
     }
 
-    .html .html-section1 .html-skills,
-    .html .html-section1 .html-explain,
-    .html .html-section2 .html-features,
-    .html .html-section2 .html-use,
-    .html .html-more {
+    .css .css-section1 .css-skills,
+    .css .css-section1 .css-explain,
+    .css .css-section2 .css-features,
+    .css .css-section2 .css-use,
+    .css .css-more {
         width: 100%;
         margin-bottom: 20px;
         padding: 15px 30px;
     }
 
-    .html .html-section1 .html-skills h2,
-    .html .html-section1 .html-explain h2,
-    .html .html-section2 .html-features h2,
-    .html .html-section2 .html-use h2,
-    .html .html-more h2 {
+    .css .css-section1 .css-skills h2,
+    .css .css-section1 .css-explain h2,
+    .css .css-section2 .css-features h2,
+    .css .css-section2 .css-use h2,
+    .css .css-more h2 {
         font-size: 2rem;
     }
 }
@@ -780,53 +789,53 @@ footer .footer-content h1 {
     .nav-toggle {
         display: block;
     }
-    
+
     .skills-main {
         display: none;
     }
 
-    .html {
+    .css {
         padding-top: 80px;
         padding-left: 5px;
         padding-right: 5px;
     }
 
-    .html .html-main {
+    .css .css-main {
         width: 100%;
     }
 
-    .html .html-main h1 {
+    .css .css-main h1 {
         font-size: 1.1rem;
     }
 
-    .html .html-main p {
+    .css .css-main p {
         font-size: 0.8rem;
         text-align: center;
     }
 
-    .html .html-section1 {
+    .css .css-section1 {
         margin-bottom: 0px;
     }
 
-    .html .html-section2 {
+    .css .css-section2 {
         margin-bottom: 0px;
     }
 
-    .html .html-section1 .html-skills,
-    .html .html-section1 .html-explain,
-    .html .html-section2 .html-features,
-    .html .html-section2 .html-use,
-    .html .html-more {
+    .css .css-section1 .css-skills,
+    .css .css-section1 .css-explain,
+    .css .css-section2 .css-features,
+    .css .css-section2 .css-use,
+    .css .css-more {
         width: 100%;
         margin-bottom: 20px;
         padding: 5px 10px;
     }
 
-    .html .html-section1 .html-skills h2,
-    .html .html-section1 .html-explain h2,
-    .html .html-section2 .html-features h2,
-    .html .html-section2 .html-use h2,
-    .html .html-more h2 {
+    .css .css-section1 .css-skills h2,
+    .css .css-section1 .css-explain h2,
+    .css .css-section2 .css-features h2,
+    .css .css-section2 .css-use h2,
+    .css .css-more h2 {
         font-size: 1.2rem;
     }
 
